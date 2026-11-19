@@ -18,7 +18,9 @@ const translations = {
 
     aboutEyebrow: "PERFIL PROFESIONAL",
     aboutTitle: "Pensamiento analítico.<br><em>Impacto tangible.</em>",
+
     aboutP1: "Soy Científico de Datos enfocado en transformar problemas de negocio en soluciones analíticas escalables. Cuento con experiencia en el diseño, desarrollo e implementación de soluciones de Machine Learning, Deep Learning, Procesamiento de Lenguaje Natural (NLP) y modelos estadísticos de Series de Tiempo.",
+
     aboutP2: "Mi experiencia abarca desde el procesamiento de grandes volúmenes de información mediante tecnologías de cómputo distribuido como PySpark, hasta el desarrollo de modelos predictivos, detección de anomalías y automatización de procesos analíticos. Complemento mis capacidades técnicas con una visión orientada al negocio, transformando hallazgos complejos en insights ejecutivos y recomendaciones accionables mediante Data Storytelling.",
 
     principle1: "Diseñar soluciones escalables",
@@ -29,17 +31,17 @@ const translations = {
     servicesTitle: "Soluciones basadas<br>en <em>datos.</em>",
     servicesIntro: "Experiencia técnica y analítica para desarrollar soluciones que conecten los datos con los objetivos estratégicos de cada organización.",
 
-    service1Title: "Análisis exploratorio",
-    service1Text: "Exploración de datos, ingeniería de características, análisis estadístico y detección de patrones para identificar oportunidades y generar insights estratégicos.",
+    service1Title: "Análisis de datos e insights de negocio",
+    service1Text: "Análisis exploratorio, estadístico y financiero, identificación de patrones y generación de recomendaciones estratégicas para respaldar la toma de decisiones.",
 
-    service2Title: "Machine Learning & AI",
-    service2Text: "Desarrollo de modelos de clasificación, regresión, segmentación y Deep Learning, incluyendo evaluación, interpretabilidad y validación de resultados.",
+    service2Title: "Modelado predictivo y Machine Learning",
+    service2Text: "Desarrollo de modelos de clasificación, regresión, segmentación y Deep Learning para identificar patrones, anticipar resultados y resolver problemas de negocio.",
 
-    service3Title: "Series de tiempo",
-    service3Text: "Desarrollo de modelos estadísticos, ensambles de pronóstico y detección de anomalías para anticipar tendencias y comportamientos futuros.",
+    service3Title: "Pronósticos y detección de anomalías",
+    service3Text: "Desarrollo de modelos estadísticos y de Machine Learning para pronosticar tendencias, anticipar comportamientos y detectar desviaciones relevantes en los datos.",
 
-    service4Title: "Automatización y reporting",
-    service4Text: "Procesamiento de grandes volúmenes de datos, automatización de pipelines analíticos y dashboards ejecutivos mediante Python, SQL y tecnologías distribuidas.",
+    service4Title: "Automatización de datos y Business Intelligence",
+    service4Text: "Automatización de procesos analíticos, construcción de pipelines de datos, procesamiento de grandes volúmenes de información y desarrollo de dashboards ejecutivos.",
 
     projectsEyebrow: "TRABAJO SELECCIONADO",
     projectsTitle: "Proyectos que convierten<br>datos en <em>valor.</em>",
@@ -103,7 +105,9 @@ const translations = {
 
     aboutEyebrow: "PROFESSIONAL PROFILE",
     aboutTitle: "Analytical thinking.<br><em>Tangible impact.</em>",
+
     aboutP1: "I am a Data Scientist focused on transforming business challenges into scalable analytical solutions. I have experience designing, developing and implementing Machine Learning, Deep Learning, Natural Language Processing (NLP) and statistical Time Series solutions.",
+
     aboutP2: "My experience ranges from processing large-scale datasets using distributed computing technologies such as PySpark to developing predictive models, anomaly detection systems and analytical automation workflows. I complement my technical expertise with a strong business-oriented mindset, translating complex findings into executive insights and actionable recommendations through effective Data Storytelling.",
 
     principle1: "Design scalable solutions",
@@ -114,17 +118,17 @@ const translations = {
     servicesTitle: "Solutions powered<br>by <em>data.</em>",
     servicesIntro: "Technical and analytical expertise to develop solutions that connect data with each organisation's strategic objectives.",
 
-    service1Title: "Exploratory analysis",
-    service1Text: "Data exploration, feature engineering, statistical analysis and pattern detection to identify opportunities and generate strategic insights.",
+    service1Title: "Data Analysis & Business Insights",
+    service1Text: "Exploratory, statistical and financial analysis, pattern identification and strategic recommendations to support informed business decisions.",
 
-    service2Title: "Machine Learning & AI",
-    service2Text: "Development of classification, regression, segmentation and Deep Learning models, including evaluation, interpretability and validation.",
+    service2Title: "Predictive Modeling & Machine Learning",
+    service2Text: "Development of classification, regression, segmentation and Deep Learning models to identify patterns, anticipate outcomes and solve business challenges.",
 
-    service3Title: "Time series",
-    service3Text: "Development of statistical models, forecasting ensembles and anomaly detection systems to anticipate future trends and behaviours.",
+    service3Title: "Forecasting & Anomaly Detection",
+    service3Text: "Development of statistical and Machine Learning models to forecast trends, anticipate future behaviour and detect relevant data deviations.",
 
-    service4Title: "Automation & reporting",
-    service4Text: "Large-scale data processing, analytical pipeline automation and executive dashboards using Python, SQL and distributed technologies.",
+    service4Title: "Data Automation & Business Intelligence",
+    service4Text: "Automation of analytical processes, data pipeline development, large-scale data processing and executive dashboard development.",
 
     projectsEyebrow: "SELECTED WORK",
     projectsTitle: "Projects that turn<br>data into <em>value.</em>",
@@ -172,7 +176,7 @@ const translations = {
   }
 };
 
-// Lista de tecnologías
+// Technologies displayed in the professional expertise section.
 const technologies = [
   "PYTHON",
   "SQL",
@@ -194,7 +198,7 @@ function updateTechnologies() {
   const techList = document.querySelector(".tech-list");
 
   if (!techList) {
-    console.warn("No se encontró el elemento .tech-list en el HTML.");
+    console.warn("The .tech-list element was not found.");
     return;
   }
 
@@ -204,18 +208,22 @@ function updateTechnologies() {
 }
 
 function setLanguage(language) {
+  if (!translations[language]) {
+    console.warn(`Language "${language}" is not supported.`);
+    return;
+  }
+
   currentLanguage = language;
   document.documentElement.lang = language;
 
   document.querySelectorAll("[data-i18n]").forEach(element => {
     const key = element.dataset.i18n;
 
-    if (translations[language][key]) {
+    if (translations[language][key] !== undefined) {
       element.innerHTML = translations[language][key];
     }
   });
 
-  // Actualizar tecnologías independientemente del idioma
   updateTechnologies();
 
   if (languageSwitch) {
@@ -228,21 +236,21 @@ function setLanguage(language) {
   }
 }
 
-// Selector de idioma
+// Language selector
 if (languageSwitch) {
   languageSwitch.addEventListener("click", () => {
     setLanguage(currentLanguage === "es" ? "en" : "es");
   });
 }
 
-// Año actual
+// Current year
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-// Navegación móvil
+// Mobile navigation
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -261,6 +269,5 @@ if (menuToggle && navLinks) {
   });
 }
 
-// Inicializar página en español y cargar tecnologías
+// Initialise website in Spanish
 setLanguage("es");
-
