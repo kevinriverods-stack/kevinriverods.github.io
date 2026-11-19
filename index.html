@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio bilingüe de Data Science, Machine Learning y Business Analytics.">
+  <meta name="theme-color" content="#10243a">
+  <title>Data Science &amp; Analytics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Portfolio home">
+        <span class="brand-mark">DS</span>
+        <span class="brand-name">Data Science<span>&amp; Analytics</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="navAbout">Acerca de mí</a>
+        <a href="#services" data-i18n="navServices">Servicios</a>
+        <a href="#projects" data-i18n="navProjects">Proyectos</a>
+        <a href="#contact" data-i18n="navContact">Contacto</a>
+        <button class="language-switch" id="languageSwitch" type="button" aria-label="Switch language">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">DATA SCIENCE · BUSINESS ANALYTICS · MACHINE LEARNING</span></p>
+          <h1 data-i18n="heroTitle">Transformo datos en <em>decisiones</em> de negocio.</h1>
+          <p class="hero-lead" data-i18n="heroLead">Desarrollo soluciones analíticas que ayudan a las organizaciones a comprender sus datos, anticipar escenarios y encontrar oportunidades de crecimiento.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects" data-i18n="heroCta">Explorar proyectos <span>↗</span></a>
+            <a class="button button-secondary" href="#contact" data-i18n="heroSecondary">Hablemos</a>
+          </div>
+          <div class="hero-meta">
+            <span class="status-dot"></span>
+            <span data-i18n="heroStatus">Disponible para proyectos freelance seleccionados</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Abstract data visualization">
+          <div class="visual-top"><span>ANALYTICS / 01</span><span class="visual-dot"></span></div>
+          <div class="visual-title">DATA<br><strong>IN MOTION.</strong></div>
+          <div class="chart">
+            <div class="chart-label"><span>MODEL SIGNAL</span><span>+24.8%</span></div>
+            <svg viewBox="0 0 520 190" role="img" aria-label="Illustrative upward data trend">
+              <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4bc4bd" stop-opacity=".30"/><stop offset="1" stop-color="#4bc4bd" stop-opacity="0"/></linearGradient></defs>
+              <g class="grid-lines"><path d="M0 25H520M0 70H520M0 115H520M0 160H520"/></g>
+              <path class="chart-area" d="M0 150 C45 145 50 115 95 124 S150 140 190 95 S255 115 295 78 S355 95 390 52 S455 65 520 12 V190 H0Z"/>
+              <path class="chart-line" d="M0 150 C45 145 50 115 95 124 S150 140 190 95 S255 115 295 78 S355 95 390 52 S455 65 520 12"/>
+              <circle cx="520" cy="12" r="5" class="chart-point"/>
+            </svg>
+            <div class="chart-axis"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span></div>
+          </div>
+          <div class="visual-footer"><span>INSIGHT</span><span>STRATEGY</span><span>IMPACT</span></div>
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-inner">
+        <span data-i18n="trustText">HERRAMIENTAS Y ÁREAS DE TRABAJO</span>
+        <div class="tech-list"><b>PYTHON</b><b>SQL</b><b>MACHINE LEARNING</b><b>STATISTICS</b><b>SHAP</b><b>SPARK</b></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="about">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="aboutEyebrow">PERFIL</span></p>
+          <h2 data-i18n="aboutTitle">Pensamiento analítico.<br><em>Impacto tangible.</em></h2>
+        </div>
+        <div class="about-text">
+          <p data-i18n="aboutP1">Soy profesional de ciencia de datos enfocado en conectar capacidades técnicas con necesidades reales del negocio. Me interesa convertir datos complejos en información clara, modelos útiles y recomendaciones accionables.</p>
+          <p data-i18n="aboutP2">Mi experiencia incluye análisis exploratorio, modelado predictivo, segmentación, series de tiempo, automatización y explicación de modelos. Trabajo con un enfoque estructurado: entender el problema, validar los datos, medir resultados y comunicar hallazgos.</p>
+          <div class="principles">
+            <div><span>01</span><b data-i18n="principle1">Entender el problema</b></div>
+            <div><span>02</span><b data-i18n="principle2">Construir soluciones confiables</b></div>
+            <div><span>03</span><b data-i18n="principle3">Comunicar el impacto</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="servicesEyebrow">QUÉ PUEDO APORTAR</span></p><h2 data-i18n="servicesTitle">Soluciones basadas<br>en <em>datos.</em></h2></div>
+          <p data-i18n="servicesIntro">Desde el diagnóstico inicial hasta la implementación de modelos y herramientas analíticas.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><span class="card-number">01</span><div class="service-icon">⌁</div><h3 data-i18n="service1Title">Análisis exploratorio</h3><p data-i18n="service1Text">Limpieza, exploración y diagnóstico para descubrir patrones, problemas de calidad y oportunidades.</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><span class="card-number">02</span><div class="service-icon">◎</div><h3 data-i18n="service2Title">Machine Learning</h3><p data-i18n="service2Text">Modelos de clasificación, regresión, predicción y segmentación orientados a objetivos concretos.</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><span class="card-number">03</span><div class="service-icon">◷</div><h3 data-i18n="service3Title">Series de tiempo</h3><p data-i18n="service3Text">Pronósticos de ventas, demanda e indicadores mediante modelos estadísticos y de aprendizaje automático.</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><span class="card-number">04</span><div class="service-icon">▤</div><h3 data-i18n="service4Title">Automatización y reporting</h3><p data-i18n="service4Text">Procesos reproducibles para integrar, transformar y reportar datos con Python y SQL.</p><span class="card-arrow">↗</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="projectsEyebrow">TRABAJO SELECCIONADO</span></p><h2 data-i18n="projectsTitle">Proyectos que convierten<br>datos en <em>valor.</em></h2></div>
+          <p data-i18n="projectsIntro">Casos demostrativos desarrollados con datos públicos o sintéticos. Cada proyecto documentará el problema, el enfoque técnico y los resultados.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-featured">
+            <div class="project-art art-churn"><div class="art-label">01 / PREDICTIVE ANALYTICS</div><div class="art-big">CHURN<br><span>INTELLIGENCE</span></div><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="project-info"><div class="project-type" data-i18n="project1Type">CLASIFICACIÓN · EXPLICABILIDAD</div><h3 data-i18n="project1Title">Customer Churn Prediction</h3><p data-i18n="project1Text">Identificación de clientes con riesgo de abandono y explicación de los factores que influyen en la predicción.</p><div class="tags"><span>Python</span><span>Scikit-learn</span><span>SHAP</span></div><span class="project-status" data-i18n="comingSoon">Próximamente · En desarrollo</span></div>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-forecast"><div class="art-label">02 / TIME SERIES</div><svg viewBox="0 0 400 160" aria-label="Forecast line chart"><path d="M0 130 C45 115 55 80 100 95 S155 110 195 55 S255 80 290 42 S350 60 400 15" fill="none" stroke="#6bd2c5" stroke-width="3"/><path d="M290 42 C330 15 360 45 400 5" fill="none" stroke="#d8a96b" stroke-width="3" stroke-dasharray="6 6"/></svg><div class="art-big small">FORECAST<br>THE FUTURE.</div></div>
+            <div class="project-info"><div class="project-type" data-i18n="project2Type">PRONÓSTICO · MODELADO</div><h3 data-i18n="project2Title">Sales Forecasting</h3><p data-i18n="project2Text">Comparación de modelos estadísticos y de machine learning para pronosticar ventas y demanda.</p><div class="tags"><span>Python</span><span>Statsmodels</span><span>Forecasting</span></div><span class="project-status" data-i18n="comingSoon">Próximamente · En desarrollo</span></div>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-segment"><div class="art-label">03 / CUSTOMER ANALYTICS</div><div class="cluster cluster-a"></div><div class="cluster cluster-b"></div><div class="cluster cluster-c"></div><div class="art-big small">FIND YOUR<br>SEGMENTS.</div></div>
+            <div class="project-info"><div class="project-type" data-i18n="project3Type">CLUSTERING · PCA</div><h3 data-i18n="project3Title">Customer Segmentation</h3><p data-i18n="project3Text">Descubrimiento de grupos de clientes y elaboración de perfiles accionables para estrategias comerciales.</p><div class="tags"><span>Python</span><span>K-Means</span><span>PCA</span></div><span class="project-status" data-i18n="comingSoon">Próximamente · En desarrollo</span></div>
+          </article>
+        </div>
+        <p class="projects-note" data-i18n="projectsNote">Los proyectos se publicarán conforme estén validados y documentados. No se presentan métricas ni resultados ficticios.</p>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container approach-grid">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="approachEyebrow">METODOLOGÍA</span></p><h2 data-i18n="approachTitle">De la pregunta<br>al <em>resultado.</em></h2><p class="approach-intro" data-i18n="approachIntro">Un proceso transparente y enfocado en generar entregables útiles, no complejidad innecesaria.</p></div>
+        <div class="steps">
+          <div class="step"><span>01</span><div><h3 data-i18n="step1Title">Descubrimiento</h3><p data-i18n="step1Text">Definimos el objetivo, las restricciones y los criterios de éxito.</p></div></div>
+          <div class="step"><span>02</span><div><h3 data-i18n="step2Title">Análisis</h3><p data-i18n="step2Text">Evaluamos las fuentes, calidad y estructura de los datos.</p></div></div>
+          <div class="step"><span>03</span><div><h3 data-i18n="step3Title">Desarrollo</h3><p data-i18n="step3Text">Construimos, probamos y validamos la solución adecuada.</p></div></div>
+          <div class="step"><span>04</span><div><h3 data-i18n="step4Title">Entrega</h3><p data-i18n="step4Text">Presentamos resultados, documentación y siguientes pasos.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
+        <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="contactEyebrow">TRABAJEMOS JUNTOS</span></p>
+        <h2 data-i18n="contactTitle">¿Qué problema<br>podemos resolver <em>con datos?</em></h2>
+        <p data-i18n="contactText">Cuéntame qué necesitas analizar, predecir o automatizar. Podemos conversar sobre el alcance de tu proyecto.</p>
+        <a class="button button-light" href="mailto:TU_CORREO@ejemplo.com?subject=Data%20Science%20Project" data-i18n="contactButton">Iniciar una conversación <span>↗</span></a>
+        <p class="contact-small" data-i18n="contactAvailability">Disponible para proyectos freelance y colaboraciones remotas.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">DS</span><span class="brand-name">Data Science<span>&amp; Analytics</span></span></a><span>© <span id="year"></span> <span data-i18n="footerText">Data Science & Analytics Portfolio. Todos los derechos reservados.</span></span><a href="#home" class="back-top" data-i18n="backTop">Volver arriba ↑</a></div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
