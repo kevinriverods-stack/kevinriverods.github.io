@@ -1,4 +1,5 @@
 
+
 const translations = {
   es: {
     navAbout: "Acerca de mí",
@@ -17,9 +18,7 @@ const translations = {
 
     aboutEyebrow: "PERFIL PROFESIONAL",
     aboutTitle: "Pensamiento analítico.<br><em>Impacto tangible.</em>",
-
     aboutP1: "Soy Científico de Datos enfocado en transformar problemas de negocio en soluciones analíticas escalables. Cuento con experiencia en el diseño, desarrollo e implementación de soluciones de Machine Learning, Deep Learning, Procesamiento de Lenguaje Natural (NLP) y modelos estadísticos de Series de Tiempo.",
-
     aboutP2: "Mi experiencia abarca desde el procesamiento de grandes volúmenes de información mediante tecnologías de cómputo distribuido como PySpark, hasta el desarrollo de modelos predictivos, detección de anomalías y automatización de procesos analíticos. Complemento mis capacidades técnicas con una visión orientada al negocio, transformando hallazgos complejos en insights ejecutivos y recomendaciones accionables mediante Data Storytelling.",
 
     principle1: "Diseñar soluciones escalables",
@@ -104,9 +103,7 @@ const translations = {
 
     aboutEyebrow: "PROFESSIONAL PROFILE",
     aboutTitle: "Analytical thinking.<br><em>Tangible impact.</em>",
-
     aboutP1: "I am a Data Scientist focused on transforming business challenges into scalable analytical solutions. I have experience designing, developing and implementing Machine Learning, Deep Learning, Natural Language Processing (NLP) and statistical Time Series solutions.",
-
     aboutP2: "My experience ranges from processing large-scale datasets using distributed computing technologies such as PySpark to developing predictive models, anomaly detection systems and analytical automation workflows. I complement my technical expertise with a strong business-oriented mindset, translating complex findings into executive insights and actionable recommendations through effective Data Storytelling.",
 
     principle1: "Design scalable solutions",
@@ -175,7 +172,7 @@ const translations = {
   }
 };
 
-// Technologies displayed in the professional expertise section.
+// Lista de tecnologías
 const technologies = [
   "PYTHON",
   "SQL",
@@ -193,6 +190,19 @@ let currentLanguage = "es";
 
 const languageSwitch = document.getElementById("languageSwitch");
 
+function updateTechnologies() {
+  const techList = document.querySelector(".tech-list");
+
+  if (!techList) {
+    console.warn("No se encontró el elemento .tech-list en el HTML.");
+    return;
+  }
+
+  techList.innerHTML = technologies
+    .map(technology => `<b>${technology}</b>`)
+    .join("");
+}
+
 function setLanguage(language) {
   currentLanguage = language;
   document.documentElement.lang = language;
@@ -205,13 +215,8 @@ function setLanguage(language) {
     }
   });
 
-  const techList = document.querySelector(".tech-list");
-
-  if (techList) {
-    techList.innerHTML = technologies
-      .map(technology => `<b>${technology}</b>`)
-      .join("");
-  }
+  // Actualizar tecnologías independientemente del idioma
+  updateTechnologies();
 
   if (languageSwitch) {
     languageSwitch.textContent = language === "es" ? "EN" : "ES";
@@ -223,21 +228,21 @@ function setLanguage(language) {
   }
 }
 
-// Language selector
+// Selector de idioma
 if (languageSwitch) {
   languageSwitch.addEventListener("click", () => {
     setLanguage(currentLanguage === "es" ? "en" : "es");
   });
 }
 
-// Current year
+// Año actual
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-// Mobile navigation
+// Navegación móvil
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -256,5 +261,6 @@ if (menuToggle && navLinks) {
   });
 }
 
-// Initialise website in Spanish
+// Inicializar página en español y cargar tecnologías
 setLanguage("es");
+
